@@ -3,6 +3,10 @@ html {
   font-family: 'Orelega One';
 }
 .App {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
   min-height: 90vh;
 }
@@ -40,4 +44,43 @@ img {
   width: 99%;
   height: auto;
   box-shadow: 0 0 .5rem .2rem;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid blueviolet;
+  box-shadow: 0 0 .3rem .3rem rgba(104, 82, 124, 0.664);
+  border-radius: .75rem;
+  background-color: rgba(0, 139, 139, 0.479);
+  width: 50%;
+  padding-top: .75rem;
+}
+form label {
+  padding: 1%;
+}
+#form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+  box-shadow: 0 0 .4rem .3rem rgba(255, 0, 0, 0.582);
+  border-radius: 1rem;
+  background-color: rgba(255, 127, 80, 0.445);
+  width: 70%;
+  padding: 1.5rem 0 3rem;
+}
+.toppings {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  text-align: left;
+}
+#toppings {
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: .5rem;
+}
+#error {
+  color: red;
 }

@@ -8,7 +8,7 @@ const Header = () => {
             <h1>Lambda Eats</h1>
             <nav className="nav-links">
                 <Link to="/"><button>Home</button></Link>
-                <Link to="/pizza?/"><button id="form-button">Pizza?</button></Link>                
+                <Link to="/pizza"><button id="form-button">Pizza?</button></Link>                
             </nav>
         </div>
     );
