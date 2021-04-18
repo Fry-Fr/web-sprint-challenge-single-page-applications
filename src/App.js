@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Header from "./Header"
 import Home from "./Home"
+import Form from "./Form"
 
 const initialFormData = {
   name:'',
@@ -22,10 +23,18 @@ const App = () => {
   }
 
   return (
-    <Route path="/">
-      <Header/>
-      <Home update={updateForm} form={formData}/>
-    </Route>
+    <>
+    <Switch>
+      <Route path="/">
+        <Header/>
+        <Home update={updateForm} form={formData}/>
+      </Route>
+
+      <Route path="/pizza?/">
+        <Form/>
+      </Route>
+    </Switch>
+    </>
   );
 };
 export default App;
