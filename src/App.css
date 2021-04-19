@@ -1,38 +1,95 @@
+html {
+  background: linear-gradient(90deg,rgb(189, 189, 3), rgb(248, 248, 72),rgb(189, 189, 3) 130%);
+  font-family: 'Orelega One';
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  min-height: 90vh;
+}
+
+.header {
+  display: flex;
+  flex-flow: row;
+  align-items: baseline;
+  justify-content: center;
+  border-radius: .5rem;
+}
+.header h1 {
+  margin-right: 2.5rem;
+  color: rgb(87 93 6);
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  flex-flow: row;
+}
+.nav-links button {
+  margin: .5rem;
+  background: yellowgreen;
+}
+
+#picture {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.25rem;
+}
+img {
+  border-radius: 1.25rem;
+  width: 99%;
+  height: auto;
+  box-shadow: 0 0 .5rem .2rem;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid blueviolet;
+  box-shadow: 0 0 .3rem .3rem rgba(104, 82, 124, 0.664);
+  border-radius: .75rem;
+  background-color: rgba(0, 139, 139, 0.479);
+  width: 50%;
+  padding-top: .75rem;
+}
+form label {
+  padding: 1%;
+}
+#form {
+  display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid red;
+  box-shadow: 0 0 .4rem .3rem rgba(255, 0, 0, 0.582);
+  border-radius: 1rem;
+  background-color: rgba(255, 127, 80, 0.445);
+  width: 70%;
+  padding: 1.5rem 0 3rem;
 }
-
-.App-link {
-  color: #61dafb;
+.toppings {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  text-align: left;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#toppings {
+  display: flex;
+  flex-flow: column;
+  padding-left: .05rem;
+}
+#error {
+  color: red;
+}
+#order-card {
+  background: radial-gradient(rgb(163, 163, 80), rgb(236, 236, 214));
+  border: 1px solid rgb(19, 19, 63);
+  border-radius: .3rem;
+  box-shadow: rgb(109, 87, 57) 0 0 .5rem .25rem;
+  margin: 2%;
+  padding: 1%;
 }
