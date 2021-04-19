@@ -86,7 +86,10 @@ form label {
   color: red;
 }
 #order-card {
-  border: 1px solid blue;
+  background: radial-gradient(rgb(163, 163, 80), rgb(236, 236, 214));
+  border: 1px solid rgb(19, 19, 63);
+  border-radius: .3rem;
+  box-shadow: rgb(109, 87, 57) 0 0 .5rem .25rem;
   margin: 2%;
   padding: 1%;
 }
