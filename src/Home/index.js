@@ -2,7 +2,8 @@ import React from "react";
 import picture from '../Assets/Pizza.jpg'
 
 const Home = ({ order }) => {
-
+//Returns the "/" route Home element.
+//Orders filled out and submitted from the Form are rendered in this component.
     return (
         <div id="picture">
             <img src={picture} alt="pizza"/>

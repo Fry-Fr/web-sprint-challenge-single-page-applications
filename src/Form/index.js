@@ -2,18 +2,21 @@ import React from "react";
 
 const Form =({ form, update, submit, disabled, error }) => {
 
+    //event handler for all changes to the <form>
     const onChange = (event) => {
+
         const name = event.target.name;
         const value = event.target.value
+        
         if ( event.target.type === "checkbox" ) {
             const value = event.target.checked
             update(name,value)
         }else{
             update(name,value)
         }
-        
     }
 
+    //onSubmit event handler
     const onSubmit = (event) => {
         event.preventDefault()
         submit()

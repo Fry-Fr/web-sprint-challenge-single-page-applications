@@ -17,12 +17,14 @@ const initialFormData = {
 }
 
 const App = () => {
-  
+  //All stateData held in App state
   const [ formErrors, setFormErrors ] = useState('')
   const [ formData, setFormData ] = useState(initialFormData)
   const [ order, setOrder ] = useState([])
   const [ disabled, setDisabled ] = useState(true)
 
+  //updateForm gets name and value from the onChange event handler.
+  //Parses res's and err's checking to match the values through yup's object schema for form validation.
   const updateForm = (name, value) => {
     yup
     .reach(schema,name)
@@ -39,7 +41,7 @@ const App = () => {
         [name]:err.errors[0]
       })
     })
-
+    //this handles the checkbox values. So that one must be checked in order to be valid.
     if (name === "pepps" || name === "jpepps" || name === "gpepps" || name === "bpepps") {
       setFormData({
         ...formData,
@@ -73,6 +75,7 @@ const App = () => {
     })
   }
 
+  //puts formData into newForm to have ready for order state.
   const Submit = () => {
     const newForm = {
       name: formData.name,
@@ -87,9 +90,10 @@ const App = () => {
       [...order,
       newForm]
     )
-    setFormData(initialFormData)
+    setFormData(initialFormData)//resetting forData to initial formData
   }
 
+  //effect hook keeping formData in deps and enables button when isvalid.
   useEffect( () => {
     schema.isValid(formData)
     .then( valid => {
