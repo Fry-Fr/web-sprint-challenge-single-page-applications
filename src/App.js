@@ -20,6 +20,7 @@ const App = () => {
   
   const [ formErrors, setFormErrors ] = useState('')
   const [ formData, setFormData ] = useState(initialFormData)
+  const [ order, setOrder ] = useState([])
   const [ disabled, setDisabled ] = useState(true)
 
   const updateForm = (name, value) => {
@@ -73,6 +74,19 @@ const App = () => {
   }
 
   const Submit = () => {
+    const newForm = {
+      name: formData.name,
+      size: formData.size,
+      pepps: formData.pepps,
+      jpepps: formData.jpepps,
+      gpepps: formData.gpepps,
+      bpepps: formData.bpepps,
+      specialInstructions: formData.specialInstructions
+    }
+    setOrder(
+      [...order,
+      newForm]
+    )
     setFormData(initialFormData)
   }
 
@@ -88,7 +102,7 @@ const App = () => {
     <Switch>
       <Route exact path="/">
         <Header/>
-        <Home update={updateForm} form={formData}/>
+        <Home order={order}/>
       </Route>
 
       <Route exact path="/pizza">
